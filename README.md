@@ -1,0 +1,1 @@
+## Agentic Rag Pipeline With Fast Api (pdf + Images + Re-ranking)
