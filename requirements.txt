@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+openai
+faiss-cpu
+langchain
+langchain-community
+pypdf
+pytesseract
+pdf2image
+Pillow
+numpy
+scikit-learn
+python-multipart
