@@ -238,6 +238,24 @@ http://127.0.0.1:8000
 
 ---
 
+## Home
+
+Endpoint:
+
+```
+GET /Home
+```
+
+Example:
+
+```bash
+curl -X 'GET' \
+  'http://127.0.0.1:8000/' \
+  -H 'accept: application/json'
+```
+
+---
+
 ## 📤 Upload PDF
 
 Endpoint:
@@ -246,10 +264,14 @@ Endpoint:
 POST /upload
 ```
 
-Use Postman / Curl:
+Example:
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/upload" -F "file=@sample.pdf"
+curl -X 'POST' \
+  'http://127.0.0.1:8000/upload' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'file=@sample-compressed.pdf;type=application/pdf'
 ```
 
 ---
@@ -259,13 +281,15 @@ curl -X POST "http://127.0.0.1:8000/upload" -F "file=@sample.pdf"
 Endpoint:
 
 ```
-GET /query?q=your_question
+GET /query?query=your_question
 ```
 
 Example:
 
 ```bash
-curl "http://127.0.0.1:8000/query?q=What is the summary?"
+curl -X 'GET' \
+  'http://127.0.0.1:8000/query?query=what tasks can discuss in experiments details?' \
+  -H 'accept: application/json'
 ```
 
 ---
